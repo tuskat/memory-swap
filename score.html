@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link href="css/my_style.css" rel="stylesheet">
+
+
+   <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+<script type="text/javascript" >
+
+$(document).ready(function () {
+
+
+var jsonData;
+var obj;
+
+jQuery.ajax({
+        url: 'getscore.php',
+        dataType: 'json',
+        success: function(response) {
+         
+            jsonData = response;
+//console.log(response[0].gamescore);
+
+ var table = document.getElementById("scoretable");
+
+for (i = 0; i < response.length; i++) { 
+  var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    var cell4 = row.insertCell(3);
+
+    cell1.innerHTML = response[i].name;
+    cell2.innerHTML = response[i].mail;
+    cell3.innerHTML = response[i].gamescore;
+    cell4.innerHTML = response[i].step;
+
+   
+}
+
+        }
+});
+
+ 
+});
+
+
+
+</script>
+
+
+</head>
+<body>
+
+<div class="container">
+   <h2>Best Score</h2>
+<table id="scoretable" class="table">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>    
+    <th>Points</th>
+     <th>Nb Steps</th>
+  </tr>
+  <td>
+  </td>
+</table>
+
+<!--<a href="home.html" class="btn btn-large btn-info">Back to the game</a>-->
+
+<a href="index.html" class="btn btn-large btn-info">Back to the game</a>
+</div>
+
+</body>
+</html>

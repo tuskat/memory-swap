@@ -1,0 +1,156 @@
+ #game {
+    position: fixed;
+    left:0; top:0;
+    
+    right:30%; /* 100 - 30 */
+    border: 5px;
+}
+#menu {
+position: fixed;
+ top:0;
+ 
+ left:30em;
+  
+    border: 5px ;
+text-align: center;
+    text-shadow: 0px 2px 2px rgba(150, 150, 100, 0.8);
+}
+
+
+.card {
+
+     display: inline-block;
+  width: 80px;
+  height: 100px;
+  margin: 1em;
+  z-index : 2;
+
+  -moz-box-shadow: 2px 2px 2px #303030;
+-webkit-box-shadow: 2px 2px 2px #303030;
+box-shadow: 2px 2px 2px #303030;
+}
+
+.logomenu {
+      width: 200px;
+  height: 80px;
+  margin: 1em;
+    background-image: url("../images/logo.png");
+    margin-left: auto;
+  margin-right: auto;
+}
+
+.reset {
+    margin-bottom: 0px;
+}
+
+.backcard {
+    background-image: url("../images/card_bg.gif");
+}
+
+.frontcard {
+ background-image: url("../images/colour1.gif");   
+}
+
+
+.colour1 {
+ background-image: url("../images/colour1.gif");   
+}
+
+.colour2 {
+ background-image: url("../images/colour2.gif");   
+}
+
+.colour3 {
+ background-image: url("../images/colour3.gif");   
+}
+
+.colour4 {
+ background-image: url("../images/colour4.gif");   
+}
+
+.colour5 {
+ background-image: url("../images/colour5.gif");   
+}
+
+.colour6 {
+ background-image: url("../images/colour6.gif");   
+}
+
+.colour7 {
+ background-image: url("../images/colour7.gif");   
+}
+
+.colour8 {
+ background-image: url("../images/colour8.gif");   
+}
+
+
+.focused {
+     box-shadow: 0px 0px 20px 10px #777;
+}
+
+.wrapper{
+   position: relative;
+   float: left;
+   width: 450px;
+   height: 550px;
+   margin-bottom: 1em;
+   margin-left : 1em;
+ 
+   background:rgba(80,80,80,0.5);
+
+
+   z-index : 0;
+}
+
+.container-non-responsive {
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../images/Menu_Background.jpg");
+
+  background-size: 720px 576px;
+    background-repeat: no-repeat;
+
+ min-width : 720px;
+ min-height` : 576px;
+}
+
+   .custom-button {
+        padding: 10px 15px;
+        margin: 20px auto;
+        color: #FFFFFF;
+        background-color: #4CAFD7;
+        border: 0 none;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+ 
+    .custom-button:hover {
+        background: -webkit-linear-gradient(#35ADC4, #00738A);
+        background: linear-gradient(#35ADC4, #00738A);
+    }
+
+.form-box {
+  visibility:hidden;
+  position: fixed;
+   
+    
+    right:50%; /* 100 - 30 */
+    margin-top:20%;
+    margin-right: 10%;
+    border: 25px;
+
+
+   background:rgba(80,80,80,0.5);
+
+
+   z-index : 2;
+
+}
+
+.form-button {
+  margin-left: 10%;
+}

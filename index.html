@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <meta name="description" content="">
+    <meta name="Cedric Marcellin" content="">
+
+    <title>Color Memory</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"> -->
+    <!-- Custom CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href="css/my_style.css" rel="stylesheet">
+    
+
+
+<script>
+ window.onload = function () {
+   
+   var boardElement = document.getElementsByClassName("wrapper");
+   
+
+   var game = new Game(boardElement);
+   game.begin();
+ 
+ };
+
+function reset()
+{
+     var boardElement = document.getElementsByClassName("wrapper");
+  //  boardElement.removeChild('card');
+$('.card').remove();
+    var game = new Game(boardElement);
+ document.getElementById("reset").blur();
+ document.getElementById("scorebox").textContent= 0;
+ document.getElementById("stepbox").textContent= 0;
+
+node = document.getElementById("form-box"); 
+node.style.visibility = "hidden";
+
+   game.begin();
+}
+
+function submitScore() {
+    document.getElementById("scoreform").submit();
+}
+</script>
+
+  <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/game.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="container-non-responsive " >
+
+  
+<div id="game" >
+   
+ 
+
+     <div id="wrapper" class="wrapper" >
+   
+    </div>
+ 
+
+<div id="menu" >  
+<div class="logomenu"></div>
+<div >
+         <h3  class="text-center bg-info" ><font face="Montserrat" color="white">Score : </h3>
+         <h3  id="scorebox" class="text-center">0</h3>
+         <h3  class="text-center bg-info" >Steps : </h3>
+         <h3  id="stepbox" class="text-center">0</h3>
+</div>
+
+<button id="reset" class="custom-button" onclick="reset()">Reset</button>
+</div>
+</div>
+
+
+
+<div class="form-box" id="form-box" >
+<form id="scoreform"  action="score-db.php">
+  <h3> Congratulations!</h3><br>
+  Email :<br>
+  <input type="mail" name="mail" value="">
+  <br>
+  Name:<br>
+  <input type="text" name="name" value="">
+  <br>
+<input type="hidden" id="scorefield" name="score" value="0">
+<input type="hidden" id="stepfield" name="step" value="0">
+  <br>
+  <input class="custom-button form-button" type="button" onclick="submitScore()" value="Submit">
+</form> 
+</div>
+
+</body>
+
+  
+
+
+</html>
