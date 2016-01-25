@@ -1,14 +1,13 @@
-HOW TO INSTALL :
+#Memory Swap
 
-- Install WAMP for Windows.
-- In the root directory of your localhost, extract the project so it look like something like this :
+## Description
 
-C:/WAMP/www/memory-swap
+Basic memory card game. Use the arrow and enter to select cards.
 
-- launch the WAMP Server.
-- import memory-score.sql with phpMyAdmin
-- go to your browser and type :
+## License
 
-http://localhost/memory-swap/
+Free to use, copy or modify.
 
-- Have Fun!
+## Useful Links
+
+See the project online : http://cedricmarcell.in/memory-swap/
